@@ -6,12 +6,13 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class NoteModel(
-    @PrimaryKey(autoGenerate = true)
-    var id : Int,
     @ColumnInfo
     var titleNote : String,
     @ColumnInfo
     var description : String,
     @ColumnInfo
     var date : String
-)
+){
+    @PrimaryKey(autoGenerate = true)
+    var id : Int?=null
+}
